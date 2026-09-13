@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Fresh - Straight from Farm, Straight to You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Farm Fresh</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#farmers">Farmers</a></li>
+                    <li><a href="#farmer-upload">Sell Your Produce</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="wishlist-toggle" class="wishlist-btn">Wishlist (0)</button>
+                    <button id="cart-toggle" class="cart-btn">Cart (0)</button>
+                    <button id="theme-toggle" class="theme-btn"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Straight from Farm, Straight to You</h1>
+                <p class="hero-lead">Experience the true spirit of farming with every order — from sunrise fields to your kitchen, crafted with care, honesty, and respect for the land.</p>
+                <div class="hero-info">
+                    <div class="hero-stat">
+                        <span>100% Local</span>
+                        <small>Trusted farmers</small>
+                    </div>
+                    <div class="hero-stat">
+                        <span>Fair Pricing</span>
+                        <small>Support real producers</small>
+                    </div>
+                    <div class="hero-stat">
+                        <span>Fast Delivery</span>
+                        <small>Freshness in every box</small>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#products" class="btn primary">Explore Products</a>
+                    <a href="#farmer-upload" class="btn secondary">Join as Farmer</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Our Fresh Products</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fruits">Fruits</button>
+                    <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                    <button class="filter-btn" data-filter="dairy">Dairy</button>
+                </div>
+                <div class="products-grid">
+                    <!-- Products will be populated by JS or hardcoded -->
+                    <div class="product-card" data-category="vegetables">
+                        <img src="images/fruit 2.jpg" alt="Carrot">
+                        <h3>Carrot</h3>
+                        <p class="price">₹40 per kg</p>
+                        <button class="add-to-cart-btn" data-product="Carrot" data-price="40">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="fruits">
+                        <img src="images/fruit 3.jpg" alt="Strawberry">
+                        <h3>Strawberry</h3>
+                        <p class="price">₹250 per kg</p>
+                        <button class="add-to-cart-btn" data-product="Strawberry" data-price="250">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="vegetables">
+                        <img src="images/fruit 4.jpg" alt="Spinach">
+                        <h3>Spinach</h3>
+                        <p class="price">₹20 per bunch</p>
+                        <button class="add-to-cart-btn" data-product="Spinach" data-price="20">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="dairy">
+                        <img src="images/fruit 5.jpg" alt="Milk">
+                        <h3>Milk</h3>
+                        <p class="price">₹60 per litre</p>
+                        <button class="add-to-cart-btn" data-product="Milk" data-price="60">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="fruits">
+                        <img src="images/fruit 6.jpg" alt="Banana">
+                        <h3>Banana</h3>
+                        <p class="price">₹50 per kg</p>
+                        <button class="add-to-cart-btn" data-product="Banana" data-price="50">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="farmers" class="farmers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Farmers</h2>
+                    <p class="section-subtitle">Discover the trusted growers behind every harvest — local experts delivering quality, freshness, and sustainable care.</p>
+                </div>
+                <div class="farmer-highlights">
+                    <div class="highlight-card">
+                        <strong>120+</strong>
+                        <span>Trusted reviews</span>
+                    </div>
+                    <div class="highlight-card">
+                        <strong>18+</strong>
+                        <span>Years farming</span>
+                    </div>
+                    <div class="highlight-card">
+                        <strong>30+</strong>
+                        <span>Fresh products</span>
+                    </div>
+                </div>
+                <div class="farmers-grid">
+                    <div class="farmer-card">
+                        <div class="farmer-card-top">
+                            <span class="farmer-badge">Organic Grower</span>
+                            <span class="farmer-experience">20 yrs</span>
+                        </div>
+                        <img src="images/farmer 1.jpg" alt="Rajesh Sharma">
+                        <h3>Rajesh Sharma</h3>
+                        <p class="farmer-location">Himalayan Green Farm, Himachal Pradesh</p>
+                        <p class="farmer-bio">Passionate about organic farming for over 20 years. Specializes in seasonal vegetables and natural cultivation methods.</p>
+                        <div class="farmer-stats">
+                            <span>⭐ 4.8 (120 reviews)</span>
+                            <span>🥕 15 products</span>
+                        </div>
+                        <button class="view-profile-btn" data-farmer="rajesh-sharma">View Profile</button>
+                    </div>
+                    <div class="farmer-card">
+                        <div class="farmer-card-top">
+                            <span class="farmer-badge">Sustainable Farming</span>
+                            <span class="farmer-experience">15 yrs</span>
+                        </div>
+                        <img src="images/farmer 2.jpg" alt="Amit Verma">
+                        <h3>Amit Verma</h3>
+                        <p class="farmer-location">Shivam Agro Farm, Uttar Pradesh</p>
+                        <p class="farmer-bio">Experienced farmer with 15+ years in agriculture. Focuses on wheat, pulses, and sustainable irrigation practices.</p>
+                        <div class="farmer-stats">
+                            <span>⭐ 4.9 (95 reviews)</span>
+                            <span>🌾 12 products</span>
+                        </div>
+                        <button class="view-profile-btn" data-farmer="amit-verma">View Profile</button>
+                    </div>
+                    <div class="farmer-card">
+                        <div class="farmer-card-top">
+                            <span class="farmer-badge">Fruit Specialist</span>
+                            <span class="farmer-experience">18 yrs</span>
+                        </div>
+                        <img src="images/farmer3.jpg" alt="Suresh Patel">
+                        <h3>Suresh Patel</h3>
+                        <p class="farmer-location">Krishna Valley Farm, Gujarat</p>
+                        <p class="farmer-bio">Dedicated to farming for over 18 years. Specializes in fruit cultivation like mangoes and bananas using modern techniques.</p>
+                        <div class="farmer-stats">
+                            <span>⭐ 4.7 (85 reviews)</span>
+                            <span>🍌 10 products</span>
+                        </div>
+                        <button class="view-profile-btn" data-farmer="suresh-patel">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="farmer-upload" class="farmer-upload-section">
+            <div class="container">
+                <h2>Sell Your Produce</h2>
+                <form id="product-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price</label>
+                        <input type="number" id="product-price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" required>
+                            <option value="">Select Category</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="dairy">Dairy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">Product Image</label>
+                        <input type="file" id="product-image" accept="image/*">
+                        <img id="image-preview" src="" alt="Preview" style="display: none; max-width: 200px; margin-top: 10px;">
+                    </div>
+                    <button type="submit" class="btn primary">Add Product</button>
+                </form>
+                <div id="farmer-products" class="farmer-products-grid">
+                    <!-- Dynamically added products -->
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"The freshest produce I've ever tasted! Connecting directly with farmers makes all the difference."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Love supporting local farmers. The quality is outstanding and delivery is always on time."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face" alt="Mike Wilson">
+                            <div>
+                                <h4>Mike Wilson</h4>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Farm Fresh has revolutionized how I shop for groceries. Fresh, local, and delicious!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=50&h=50&fit=crop&crop=face" alt="Emma Davis">
+                            <div>
+                                <h4>Emma Davis</h4>
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2>Farm Fresh News & Tips</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop" alt="Seasonal Eating">
+                        <div class="blog-content">
+                            <h3>The Benefits of Seasonal Eating</h3>
+                            <p>Discover why eating seasonally is better for your health, the environment, and local farmers...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=400&h=250&fit=crop" alt="Sustainable Farming">
+                        <div class="blog-content">
+                            <h3>Sustainable Farming Practices</h3>
+                            <p>Learn about the eco-friendly methods our farmers use to grow your food...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&h=250&fit=crop" alt="Farm to Table">
+                        <div class="blog-content">
+                            <h3>From Farm to Your Table</h3>
+                            <p>Follow the journey of your food from the farm to your kitchen...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Farm Fresh</h2>
+                <p>At Farm Fresh, our mission is to connect local farmers directly with customers, ensuring you get the freshest, highest-quality produce straight from the source. We believe in supporting sustainable farming practices and building stronger
+                    communities through direct farmer-to-customer relationships.</p>
+                <p>By eliminating middlemen, we help farmers earn fair prices for their hard work while providing you with nutritious, delicious food that's better for you and the environment.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals and Sidebars -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="product-details">
+                <!-- Product details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="farmer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="farmer-profile">
+                <!-- Farmer profile will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="wishlist-sidebar" class="wishlist-sidebar">
+        <div class="wishlist-header">
+            <h3>Your Wishlist</h3>
+            <button id="close-wishlist">&times;</button>
+        </div>
+        <div id="wishlist-items" class="wishlist-items">
+            <!-- Wishlist items will be populated here -->
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be populated here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button class="btn primary">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Farm Fresh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
